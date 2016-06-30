@@ -1,0 +1,35 @@
+{
+  "name": "get-input-selection",
+  "version": "1.0.0",
+  "description": "getInputSelection() provides carrot position for textarea. Works as selectionBegin and selectionEnd for all browsers",
+  "main": "dist/get-input-selection.js",
+  "scripts": {
+    "build": "npm run clean && npm run build:lib && npm run build:umd",
+    "build:lib": "BABEL_ENV=production babel src -d lib",
+    "build:umd": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "clean": "rimraf dist && rimraf lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yury-dymov/get-input-selection.git"
+  },
+  "keywords": [
+    "textarea",
+    "carrot",
+    "position"
+  ],
+  "author": "Yury Dymov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yury-dymov/get-input-selection/issues"
+  },
+  "homepage": "https://github.com/yury-dymov/get-input-selection#readme",
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.13.1"
+  }
+}
