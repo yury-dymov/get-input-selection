@@ -3,12 +3,12 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: [
-    './src/index',
+    './src/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'get-input-selection.js',
-    libraryTarget: 'commonjs'
+    libraryTarget: 'umd'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
