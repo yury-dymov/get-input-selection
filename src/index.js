@@ -47,3 +47,22 @@ export default (el) => {
 
   return { start, end };
 };
+
+export const setCaretPosition = (elem, caretPos) => {
+  if(elem) {
+    if(elem.createTextRange) {
+      const range = elem.createTextRange();
+
+      range.move('character', caretPos);
+      range.select();
+    }
+    else {
+      if(elem.selectionStart) {
+        elem.focus();
+        elem.setSelectionRange(caretPos, caretPos);
+      } else {
+        elem.focus();
+      }
+    }
+  }
+};
