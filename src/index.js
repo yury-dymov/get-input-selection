@@ -1,6 +1,6 @@
 'use strict';
 
-export default (el) => {
+export default function(el) {
   let start = 0, end = 0;
 
   if (!el) {
@@ -46,9 +46,9 @@ export default (el) => {
   }
 
   return { start, end };
-};
+}
 
-export const setCaretPosition = (elem, caretPos) => {
+export function setCaretPosition(elem, caretPos) {
   if(elem) {
     if(elem.createTextRange) {
       const range = elem.createTextRange();
@@ -65,4 +65,4 @@ export const setCaretPosition = (elem, caretPos) => {
       }
     }
   }
-};
+}
